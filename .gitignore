@@ -1,0 +1,8 @@
+.idea
+.vscode
+/data
+/logs
+/test
+/include/config.conf
+/include/configProduction.conf
+/include/configTest.conf
