@@ -8,9 +8,9 @@ def run():
     with open("E:\\Users\\L\\PycharmProjects\\scripts\\data\\coupons.txt", "r") as f:  # 打开文件
         lines = f.readlines()  # 读取全部内容 ，并以列表方式返回
         for line in lines:
-            coupons.append(line)
+            coupons.append([line,Common.NowDateTime])
 
-    sql = "INSERT INTO coupons(code) VALUES (%s)"
+    sql = "INSERT INTO coupons(code,created_at) VALUES (%s,%s)"
 
     try:
         Common.conn.begin()
